@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { CSSProperties } from "react";
 import { ProjectCard } from "../components/ProjectCard";
 import { ServiceCard } from "../components/ServiceCard";
 import { getFeaturedProjects, getWhatsAppUrl, services, siteConfig } from "../lib/content";
@@ -32,6 +33,9 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-stage" aria-label="Identidad visual de Colibrí Detalles">
+          <div className="logo-particles" aria-hidden="true">
+            {Array.from({ length: 14 }, (_, index) => <span key={index} style={{ "--particle": index } as CSSProperties} />)}
+          </div>
           <div className="hero-orbit orbit-one" />
           <div className="hero-orbit orbit-two" />
           <div className="hero-logo-wrap">

@@ -19,6 +19,24 @@ function PinIcon() {
   return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" /></svg>;
 }
 
+function FlyingHummingbird() {
+  return (
+    <div className="contact-bird-scene" aria-hidden="true">
+      <span className="bird-trail trail-one" />
+      <span className="bird-trail trail-two" />
+      <svg className="contact-flying-bird" viewBox="0 0 180 120">
+        <g className="contact-bird-wings">
+          <path d="M78 61C54 44 44 19 48 3c20 12 35 31 43 54" />
+          <path d="M86 61C77 38 81 15 94 2c8 22 7 42-1 60" />
+        </g>
+        <path d="M31 72c23-19 43-23 65-13 18-8 34-2 41 11l39 7-38 2c-13 22-42 28-64 13-17-12-29-13-53-7 8-6 11-9 10-13Z" />
+        <circle cx="132" cy="68" r="2.2" />
+      </svg>
+      <span className="contact-flower"><i /><i /><i /><i /><b /></span>
+    </div>
+  );
+}
+
 export default function ContactoPage() {
   return (
     <main className="contact-main">
@@ -53,6 +71,7 @@ export default function ContactoPage() {
           </div>
           <ContactForm />
         </div>
+        <FlyingHummingbird />
       </section>
     </main>
   );
