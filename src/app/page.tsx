@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { CSSProperties } from "react";
+import { AnimatedLogoScene } from "../components/AnimatedLogoScene";
 import { ProjectCard } from "../components/ProjectCard";
 import { ServiceCard } from "../components/ServiceCard";
 import { getFeaturedProjects, getWhatsAppUrl, services, siteConfig } from "../lib/content";
@@ -32,20 +32,7 @@ export default function Home() {
             <span>Entrega con cuidado</span>
           </div>
         </div>
-        <div className="hero-stage" aria-label="Identidad visual de Colibrí Detalles">
-          <div className="logo-particles" aria-hidden="true">
-            {Array.from({ length: 14 }, (_, index) => <span key={index} style={{ "--particle": index } as CSSProperties} />)}
-          </div>
-          <div className="hero-orbit orbit-one" />
-          <div className="hero-orbit orbit-two" />
-          <div className="hero-logo-wrap">
-            <Image className="hero-logo" src="/logo-colibri-oficial.jpg" alt="Colibrí Detalles" width={620} height={620} priority />
-          </div>
-          <span className="hero-tag tag-one">Ideas únicas</span>
-          <span className="hero-tag tag-two">Para celebrar</span>
-          <span className="hero-spark spark-one">✦</span>
-          <span className="hero-spark spark-two">✦</span>
-        </div>
+        <AnimatedLogoScene />
         <a className="scroll-cue" href="#descubre"><span /> Descubre</a>
       </section>
 
