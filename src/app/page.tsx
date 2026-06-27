@@ -4,8 +4,6 @@ import { ProjectCard } from "../components/ProjectCard";
 import { ServiceCard } from "../components/ServiceCard";
 import { getFeaturedProjects, getWhatsAppUrl, services, siteConfig } from "../lib/content";
 
-const processSteps = ["Idea", "Estilo", "Creacion", "Entrega"];
-
 export default function Home() {
   const featuredProjects = getFeaturedProjects();
 
@@ -23,54 +21,26 @@ export default function Home() {
         </div>
         <div className="hero-visual" aria-label="Identidad visual de Colibri Detalles">
           <span className="flight-path" />
-          <span className="mini-bird" />
           <Image className="hero-logo" src="/logo-colibri.svg" alt="Colibri Detalles" width={520} height={520} priority />
         </div>
       </section>
 
-      <section className="section split-section">
-        <div>
-          <p className="eyebrow">Hecho a medida</p>
-          <h2>Pocas palabras. Mucho detalle.</h2>
-        </div>
-        <p>Elige una idea, una ocasion o un color. Nosotros cuidamos la presentacion.</p>
-      </section>
-
-      <section className="service-grid">
+      <section className="service-grid visual-only-grid" aria-label="Servicios destacados">
         {services.map((service) => (
           <ServiceCard key={service.title} service={service} />
         ))}
       </section>
 
-      <section className="section section-dark">
-        <div className="section-heading">
-          <p className="eyebrow">Portafolio</p>
-          <h2>Mira. Inspírate. Cotiza.</h2>
-          <Link href="/trabajos">Ver galeria completa</Link>
-        </div>
+      <section className="section section-dark compact-section">
         <div className="project-grid">
           {featuredProjects.map((project) => (
             <ProjectCard key={project.slug} project={project} />
           ))}
         </div>
+        <Link className="gallery-link" href="/trabajos">Ver mas trabajos</Link>
       </section>
 
-      <section className="section process-section">
-        <p className="eyebrow">Proceso</p>
-        <h2>Simple.</h2>
-        <div className="process-grid">
-          {processSteps.map((step, index) => (
-            <article key={step}>
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <p>{step}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="cta-section">
-        <p className="eyebrow">Cotiza tu idea</p>
-        <h2>¿Lo hacemos?</h2>
+      <section className="soft-close" aria-label="Cotizacion">
         <a className="button primary" href={getWhatsAppUrl()}>Quiero cotizar</a>
       </section>
     </main>

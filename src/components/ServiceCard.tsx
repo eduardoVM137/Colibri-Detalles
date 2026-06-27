@@ -12,7 +12,6 @@ export function ServiceCard({ service }: { service: Service }) {
       <Image src={service.image} alt={service.title} width={900} height={680} className="service-image" />
       <div>
         <h3>{service.title}</h3>
-        <p>{service.description}</p>
       </div>
     </article>
   );

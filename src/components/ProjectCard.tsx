@@ -9,7 +9,6 @@ export function ProjectCard({ project }: { project: Project }) {
       <div className="project-overlay">
         <span>{project.category}</span>
         <h3>{project.title}</h3>
-        <p>{project.description}</p>
       </div>
     </Link>
   );
