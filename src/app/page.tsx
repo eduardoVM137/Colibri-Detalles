@@ -21,7 +21,7 @@ export default function Home() {
         </div>
         <div className="hero-visual" aria-label="Identidad visual de Colibri Detalles">
           <span className="flight-path" />
-          <Image className="hero-logo" src="/logo-colibri.svg" alt="Colibri Detalles" width={520} height={520} priority />
+          <Image className="hero-logo" src="/logo-colibri-oficial.jpg" alt="Colibrí Detalles" width={520} height={520} priority />
         </div>
       </section>
 

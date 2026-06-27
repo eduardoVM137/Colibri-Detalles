@@ -21,7 +21,7 @@ export function Header() {
   return (
     <header className="site-header">
       <Link href="/" className="brand" aria-label="Colibrí Detalles, inicio" onClick={() => setOpen(false)}>
-        <Image src="/logo-colibri.svg" alt="" width={46} height={46} priority />
+        <Image src="/logo-colibri-oficial.jpg" alt="" width={46} height={46} priority />
         <span><strong>{siteConfig.brandName.split(" ")[0]}</strong><small>Detalles</small></span>
       </Link>
       <nav className={`main-nav ${open ? "is-open" : ""}`} aria-label="Navegación principal">

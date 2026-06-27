@@ -4,6 +4,7 @@ import "./globals.css";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { WhatsAppButton } from "../components/WhatsAppButton";
+import { ScrollExperience } from "../components/ScrollExperience";
 import { siteConfig } from "../lib/content";
 
 const display = Playfair_Display({ subsets: ["latin"], variable: "--font-display" });
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   title: `${siteConfig.brandName} | Detalles personalizados`,
   description: siteConfig.subheadline,
   icons: {
-    icon: "/logo-colibri.svg"
+    icon: "/logo-colibri-oficial.jpg"
   }
 };
 
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="es">
       <body className={`${display.variable} ${sans.variable}`}>
         <Header />
+        <ScrollExperience />
         {children}
         <Footer />
         <WhatsAppButton />
