@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Detalles personalizados",
+    "description": "Regalos disenados a medida para cumpleanos, aniversarios y fechas importantes.",
+    "image": "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=1400&q=80"
+  },
+  {
+    "title": "Recuerdos para eventos",
+    "description": "Piezas especiales para celebraciones, reuniones familiares y momentos memorables.",
+    "image": "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1400&q=80"
+  },
+  {
+    "title": "Decoracion tematica",
+    "description": "Composiciones visuales con colores, detalles y estilo adaptados a tu ocasion.",
+    "image": "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=1400&q=80"
+  }
+]

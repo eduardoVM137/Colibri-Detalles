@@ -1,0 +1,36 @@
+[
+  {
+    "slug": "detalle-cumpleanos-dorado",
+    "title": "Detalle personalizado para cumpleanos",
+    "category": "Regalos personalizados",
+    "description": "Un regalo calido y elegante, preparado con tonos dorados y presentacion especial.",
+    "longDescription": "Este trabajo muestra la linea visual ideal de Colibri Detalles: cuidado por la presentacion, colorimetria calida y un acabado pensado para sorprender desde el primer vistazo.",
+    "images": [
+      "https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "recuerdo-evento-especial",
+    "title": "Recuerdo para evento especial",
+    "category": "Eventos",
+    "description": "Recuerdos con una presentacion limpia, delicada y lista para entregar a invitados.",
+    "longDescription": "Una propuesta pensada para eventos donde cada invitado recibe un detalle con identidad propia, manteniendo una imagen profesional y armonica.",
+    "images": [
+      "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "featured": true
+  },
+  {
+    "slug": "decoracion-tonos-calidos",
+    "title": "Decoracion en tonos calidos",
+    "category": "Decoracion",
+    "description": "Una composicion visual suave con detalles dorados, flores y acabados elegantes.",
+    "longDescription": "Decoracion pensada para crear un ambiente especial, con tonos suaves y detalles que elevan la experiencia del evento.",
+    "images": [
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "featured": false
+  }
+]
