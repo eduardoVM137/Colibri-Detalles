@@ -647,6 +647,42 @@ img {
   box-shadow: 0 0 16px 5px rgba(246,190,79,.5);
 }
 
+[data-theme="light"] .motion-particles .logo-firefly {
+  background: radial-gradient(
+    ellipse,
+    rgba(166,105,5,.96) 0 20%,
+    rgba(218,145,16,.72) 40%,
+    rgba(246,190,79,.28) 63%,
+    transparent 79%
+  );
+  box-shadow:
+    0 0 8px 2px rgba(185,121,9,.32),
+    0 0 20px 6px rgba(246,190,79,.15);
+  filter: blur(.2px);
+  mix-blend-mode: multiply;
+}
+
+[data-theme="light"] .motion-particles .drifting-seed {
+  background: linear-gradient(90deg, rgba(185,121,9,.18), rgba(172,108,5,.92));
+  box-shadow: 0 0 9px rgba(185,121,9,.35);
+  mix-blend-mode: multiply;
+}
+
+[data-theme="light"] .motion-particles .particle-comet span {
+  background: linear-gradient(90deg, transparent, rgba(195,128,8,.18) 22%, rgba(166,105,5,.7));
+  box-shadow: 0 0 8px rgba(185,121,9,.22);
+}
+
+[data-theme="light"] .particle-comet i {
+  background: #b77908;
+  box-shadow: 0 0 11px 3px rgba(185,121,9,.4);
+}
+
+[data-theme="light"] .motion-flower i {
+  background: linear-gradient(135deg, #ffd875, #bd7c08);
+  box-shadow: 0 0 10px rgba(185,121,9,.32);
+}
+
 .motion-particles .motion-flower {
   background: transparent;
   border: 0;

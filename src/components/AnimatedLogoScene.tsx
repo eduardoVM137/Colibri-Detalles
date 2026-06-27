@@ -26,12 +26,7 @@ const fireflies = [
   { left: "18%", top: "3%", x: [0, 16, 31, 9, -14, 0], y: [0, -8, 13, 25, 6, 0], size: 11, duration: 12.4, delay: .6 },
   { right: "4%", top: "28%", x: [0, -18, -36, -12, 8, 0], y: [0, 15, -7, -24, -5, 0], size: 10, duration: 10.8, delay: 1.9 },
   { right: "7%", bottom: "10%", x: [0, -22, -8, 18, 5, 0], y: [0, -19, -34, -10, 14, 0], size: 12, duration: 13.1, delay: .3 },
-  { left: "10%", bottom: "6%", x: [0, 14, 33, 21, -9, 0], y: [0, -22, -9, 17, 8, 0], size: 10, duration: 11.6, delay: 2.4 },
-  { left: "3%", top: "51%", x: [0, 25, 11, 38, 17, 0], y: [0, -14, 17, 5, -20, 0], size: 9, duration: 12.7, delay: 3.1 },
-  { left: "58%", top: "3%", x: [0, -17, 8, 29, 13, 0], y: [0, 20, 9, -7, 15, 0], size: 8, duration: 10.5, delay: 1.1 },
-  { right: "2%", bottom: "34%", x: [0, -31, -16, -42, -9, 0], y: [0, 13, -16, 8, 22, 0], size: 11, duration: 13.4, delay: 2.7 },
-  { left: "56%", bottom: "2%", x: [0, 19, -6, -27, 11, 0], y: [0, -28, -14, -35, -8, 0], size: 9, duration: 11.9, delay: .9 },
-  { left: "5%", top: "10%", x: [0, 21, 37, 16, -5, 0], y: [0, 11, -8, -19, 4, 0], size: 8, duration: 12.1, delay: 3.6 }
+  { left: "10%", bottom: "6%", x: [0, 14, 33, 21, -9, 0], y: [0, -22, -9, 17, 8, 0], size: 10, duration: 11.6, delay: 2.4 }
 ];
 
 export function AnimatedLogoScene() {
@@ -145,19 +140,6 @@ export function AnimatedLogoScene() {
             transition={{ duration: firefly.duration, delay: firefly.delay, repeat: Infinity, ease: "easeInOut" }}
           />
         ))}
-        <motion.div
-          className="particle-comet"
-          animate={{
-            x: ["-8vw", "1vw", "12vw", "22vw", "30vw"],
-            y: ["11vw", "3vw", "-3vw", "1vw", "-8vw"],
-            rotate: [-28, -20, -10, 4, -12],
-            opacity: [0, .85, 1, .65, 0],
-            scale: [.65, 1, .9, .75, .5]
-          }}
-          transition={{ duration: 11, repeat: Infinity, repeatDelay: 5, ease: "easeInOut" }}
-        >
-          <i /><span />
-        </motion.div>
       </div>
       <div className="hero-orbit orbit-one" />
       <div className="hero-orbit orbit-two" />
