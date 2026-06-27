@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { getWhatsAppUrl, siteConfig } from "../lib/content";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
   { href: "/", label: "Inicio" },
@@ -32,7 +33,10 @@ export function Header() {
         ))}
         <a className="mobile-nav-cta" href={getWhatsAppUrl()}>Cotizar por WhatsApp</a>
       </nav>
-      <a className="header-cta" href={getWhatsAppUrl()}>Hablemos de tu idea</a>
+      <div className="header-actions">
+        <ThemeToggle />
+        <a className="header-cta" href={getWhatsAppUrl()}>Hablemos de tu idea</a>
+      </div>
       <button className="nav-toggle" type="button" aria-label={open ? "Cerrar navegación" : "Abrir navegación"} aria-expanded={open} onClick={() => setOpen(!open)}>
         <span /><span /><span />
       </button>

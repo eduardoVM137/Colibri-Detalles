@@ -21,6 +21,18 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `
+          (function () {
+            try {
+              var saved = localStorage.getItem("colibri-theme");
+              var theme = saved === "light" || saved === "dark" ? saved : "light";
+              document.documentElement.dataset.theme = theme;
+              document.documentElement.style.colorScheme = theme;
+            } catch (_) {}
+          })();
+        ` }} />
+      </head>
       <body className={`${display.variable} ${sans.variable}`}>
         <Header />
         <ScrollExperience />

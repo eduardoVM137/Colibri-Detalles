@@ -18,7 +18,7 @@ function Hummingbird({ className }: { className: string }) {
 export function ScrollExperience() {
   useEffect(() => {
     const elements = document.querySelectorAll(
-      ".service-card, .project-card, .page-hero > *, .about-section > *, .section-heading, .footer > *, .soft-close"
+      ".service-item, .project-card, .page-hero > *, .about-section > *, .section-heading, .home-intro > *, .home-section-head > *, .process-title, .process-step, .home-final > *, .work-manifesto > *, .featured-work > *, .work-gallery-head > *, .work-entry, .work-cta > *, .about-note > *, .services-intro > *, .service-feature > *, .services-trust > *, .footer > *"
     );
     elements.forEach((element, index) => {
       element.classList.add("scroll-reveal");

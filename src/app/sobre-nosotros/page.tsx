@@ -1,21 +1,38 @@
+import type { Metadata } from "next";
 import Image from "next/image";
-import { PageHero } from "../../components/PageHero";
+import { getWhatsAppUrl } from "../../lib/content";
+
+export const metadata: Metadata = {
+  title: "Nosotros | Colibrí Detalles",
+  description: "Conoce la intención y el cuidado detrás de Colibrí Detalles."
+};
 
 export default function SobreNosotrosPage() {
   return (
-    <main>
-      <PageHero
-        eyebrow="Nuestra marca"
-        title="Un colibri como simbolo de cuidado, movimiento y belleza."
-        description="Colibri Detalles nace para transformar ideas simples en piezas memorables, cuidando color, forma y presentacion."
-      />
-      <section className="about-section">
-        <Image src="/logo-colibri-oficial.jpg" alt="Logo oficial de Colibrí Detalles" width={420} height={420} />
-        <div>
-          <h2>Detalles con identidad propia.</h2>
-          <p>Trabajamos cada pedido como una pieza especial. La meta es que el cliente sienta confianza desde la primera conversacion y que la persona que recibe el detalle note el cuidado en la presentacion.</p>
-          <p>La colorimetria dorada y blanca representa calidez, elegancia y celebracion: una base visual limpia para que cada trabajo se vea profesional.</p>
+    <main className="about-page">
+      <section className="about-simple">
+        <div className="about-simple-copy">
+          <p className="eyebrow">Nuestra esencia</p>
+          <h1>Creamos para hacer sentir <em>especial</em> a alguien.</h1>
+          <p>Colibrí Detalles nace del gusto por convertir una idea sencilla en un regalo con significado. Escuchamos, proponemos y cuidamos la presentación para que cada pieza se sienta verdaderamente personal.</p>
+          <div className="about-values">
+            <span>Cuidado</span><i>✦</i><span>Calidez</span><i>✦</i><span>Intención</span>
+          </div>
+          <a className="button primary" href={getWhatsAppUrl("Hola, me gustaría crear un detalle personalizado con ustedes.")}>Conócenos creando juntos <span>↗</span></a>
         </div>
+        <div className="about-simple-visual">
+          <div className="about-logo-ring">
+            <Image src="/logo-colibri-oficial.jpg" alt="Logo oficial de Colibrí Detalles" width={620} height={620} priority />
+          </div>
+          <p>Detalles que vuelan contigo</p>
+          <span className="about-star star-a">✦</span>
+          <span className="about-star star-b">✦</span>
+        </div>
+      </section>
+      <section className="about-note">
+        <span>01</span>
+        <p>No buscamos hacer muchas cosas iguales.</p>
+        <h2>Buscamos que la tuya se sienta hecha para ese momento y para esa persona.</h2>
       </section>
     </main>
   );
