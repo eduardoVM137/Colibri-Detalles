@@ -21,6 +21,7 @@ body {
   background: var(--cream);
   color: var(--ink);
   font-family: var(--font-sans), Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -53,6 +54,11 @@ img {
   font-weight: 700;
   gap: 12px;
   letter-spacing: -0.03em;
+  transition: transform 180ms ease;
+}
+
+.brand:hover {
+  transform: translateY(-2px);
 }
 
 .brand img {
@@ -86,6 +92,10 @@ img {
   padding: 6vw 5vw;
 }
 
+.hero-copy {
+  animation: rise-in 900ms ease both;
+}
+
 .hero-copy h1,
 .page-hero h1,
 .detail-hero h1,
@@ -101,8 +111,8 @@ img {
 }
 
 .hero-copy h1 {
-  font-size: clamp(3.5rem, 8vw, 8.5rem);
-  max-width: 900px;
+  font-size: clamp(3.3rem, 7vw, 7.2rem);
+  max-width: 760px;
 }
 
 .hero-copy p:not(.eyebrow),
@@ -172,11 +182,67 @@ img {
   display: flex;
   justify-content: center;
   padding: 8%;
+  position: relative;
+  transform: translateZ(0);
 }
 
 .hero-visual img {
   border-radius: 50%;
   filter: drop-shadow(0 40px 80px rgba(185, 133, 30, 0.28));
+}
+
+.hero-logo {
+  animation: logo-float 5s ease-in-out infinite;
+  position: relative;
+  z-index: 2;
+}
+
+.flight-path {
+  border: 1px solid rgba(185, 133, 30, 0.18);
+  border-left-color: transparent;
+  border-radius: 50%;
+  inset: 8%;
+  position: absolute;
+  transform: rotate(-18deg);
+}
+
+.mini-bird {
+  animation: bird-flight 7s ease-in-out infinite;
+  background: var(--gold-dark);
+  border-radius: 999px 999px 999px 0;
+  height: 16px;
+  left: 16%;
+  position: absolute;
+  top: 50%;
+  transform: rotate(-35deg);
+  width: 42px;
+  z-index: 3;
+}
+
+.mini-bird::before,
+.mini-bird::after {
+  background: var(--gold-dark);
+  content: "";
+  position: absolute;
+}
+
+.mini-bird::before {
+  border-radius: 100% 0 100% 0;
+  height: 28px;
+  left: 8px;
+  top: -22px;
+  transform-origin: bottom left;
+  width: 14px;
+  animation: wing 600ms ease-in-out infinite alternate;
+}
+
+.mini-bird::after {
+  border-radius: 50%;
+  height: 4px;
+  right: -8px;
+  top: 5px;
+  transform: rotate(-20deg);
+  width: 16px;
 }
 
 .section,
@@ -217,6 +283,12 @@ img {
   border-radius: 32px;
   box-shadow: 0 20px 80px rgba(23, 23, 23, 0.06);
   overflow: hidden;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 28px 90px rgba(23, 23, 23, 0.1);
+  transform: translateY(-6px);
 }
 
 .service-card div {
@@ -338,10 +410,70 @@ img {
 }
 
 .process-grid p {
-  font-size: 1.05rem;
+  font-size: 1.35rem;
   font-weight: 600;
   line-height: 1.45;
   margin-bottom: 0;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes logo-float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translateY(-16px) rotate(2deg) scale(1.02);
+  }
+}
+
+@keyframes bird-flight {
+  0% {
+    opacity: 0;
+    transform: translate(0, 80px) rotate(-25deg) scale(0.72);
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(250px, -115px) rotate(-8deg) scale(1);
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(430px, 40px) rotate(12deg) scale(0.7);
+  }
+}
+
+@keyframes wing {
+  from {
+    transform: rotate(-18deg);
+  }
+  to {
+    transform: rotate(26deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
 }
 
 .cta-section {
@@ -529,6 +661,14 @@ img {
   .hero {
     min-height: auto;
     padding-top: 48px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(3rem, 16vw, 4.6rem);
+  }
+
+  .mini-bird {
+    display: none;
   }
 
   .project-card {
